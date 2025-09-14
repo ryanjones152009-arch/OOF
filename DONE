@@ -1,0 +1,41 @@
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+
+local Plr = game:GetService("Players").LocalPlayer
+
+local Window = Fluent:CreateWindow({
+    Title = "Shite Hub " .. Fluent.Version,
+    SubTitle = "by YaMama",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Darker",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+})
+
+
+-- Fluent provides Lucide Icons, they are optional
+local Tabs = {
+    Main = Window:AddTab({ Title = "Main", Icon = "" }),
+}
+
+
+local Section = Tabs.Main:AddSection("CASH GIVER (WORKING)")
+
+Tabs.Main:AddButton({
+    Title = "GIVE CASH INFINITE",
+    Description = "Very important button",
+    Callback = function()
+       while true do
+	wait()
+	game.ReplicatedStorage.Money.CashCheck:FireServer()
+end
+    end
+})
+
+Tabs.Main:AddButton({
+    Title = "KILL ALL",
+    Description = "Very important button",
+    Callback = function()
+      Plr:Kick("HAHAH YOU THOUGHT")
+    end
+})
