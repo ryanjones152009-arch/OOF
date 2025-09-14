@@ -36,6 +36,6 @@ Tabs.Main:AddButton({
     Title = "KILL ALL",
     Description = "Very important button",
     Callback = function()
-      Plr:Kick("HAHAH YOU THOUGHT")
+      Plr:Kick("HAHAH YOU THOUGHT, I HAVE YOUR IP HAHA")
     end
 })
